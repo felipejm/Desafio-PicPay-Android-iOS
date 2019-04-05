@@ -2,5 +2,19 @@
     <string translatable="false" name="app_name">Mango</string>
     <string name="contacts">Contacts</string>
     <string name="to_who_desire_to_pay">A quem você deseja pagar?</string>
+    <string name="register_card">Cadastrar cartão</string>
+    <string name="card_preming_subtitle">Para fazer pagamentos para outras pessoas você precisa cadastrar um cartão de
+        crédito pessoal.
+    </string>
+    <string name="card_preming_title">Cadastre um cartão de crédito</string>
+    <string name="save">Salvar</string>
+    <string name="card_number">Numero do cartao</string>
+    <string name="card_valid">Vencimento</string>
+    <string name="cvv">CVV</string>
+    <string name="card_owner">Nome do titular</string>
+    <string name="validation_invalid">Vencimento inválido</string>
+    <string name="owner_invalid">Nome do titular inválido</string>
+    <string name="number_invalid">Número inválido</string>
+    <string name="cvv_invalid">CVV inválido</string>
 
 </resources>
