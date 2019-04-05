@@ -10,6 +10,7 @@
 * RxJava 2
 * Gson
 * Retrofit
+* Okhttp
 * Glide
 * Espresso
 * Junit
