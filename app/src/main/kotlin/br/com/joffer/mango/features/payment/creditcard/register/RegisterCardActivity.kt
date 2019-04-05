@@ -3,7 +3,6 @@ package br.com.joffer.mango.features.payment.creditcard.register
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.inputmethod.EditorInfo
 import androidx.appcompat.app.AppCompatActivity
 import br.com.joffer.mango.R
 import br.com.joffer.mango.features.payment.creditcard.CreditCard
