@@ -1,17 +1,15 @@
 package br.com.joffer.mango.features.payment.contacts
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.joffer.mango.R
+import br.com.joffer.mango.features.payment.creditcard.CardPrimingActivity
 import br.com.joffer.mango.infra.utils.SpaceItemDecoration
 import br.com.joffer.mango.infra.utils.dpToPx
 import br.com.joffer.mango.infra.utils.gone
 import br.com.joffer.mango.infra.utils.visible
-import com.jakewharton.rxbinding3.widget.beforeTextChangeEvents
-import com.jakewharton.rxbinding3.widget.textChangeEvents
 import com.jakewharton.rxbinding3.widget.textChanges
 import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_contacts.*
@@ -37,7 +35,11 @@ class ContactsActivity: AppCompatActivity(), ContactsView{
     override fun configuRecyclerView(contacts: List<Contact>){
         val adapter = ContactsAdapter(contacts)
         adapter.onClickListener = {
+            CardPrimingActivity.starter(this)
+        }
 
+        search_view.setOnFocusChangeListener { _, hasFocus ->
+            app_bar.setExpanded(!hasFocus)
         }
 
         diposable = search_view.textChanges()
