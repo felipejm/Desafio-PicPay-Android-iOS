@@ -17,4 +17,6 @@
 * Mockito
 
 ## Melhorias
- //TODO
+* Implementação do fluxo de edição de cartoes
+* Usar injecao de dependência
+* Implementar cenários de erro e empty state
