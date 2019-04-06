@@ -1,5 +1,4 @@
 language: android
-install: gradle wrapper --gradle-version 5.3.1
 jdk: oraclejdk8
 env:
   global:
