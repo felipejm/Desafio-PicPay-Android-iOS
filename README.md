@@ -1,3 +1,5 @@
+https://travis-ci.org/felipejm/Desafio-PicPay-Android-iOS.svg?branch=develop
+
 # Implementacao do Desafio-PicPay-Android-iOS
 
 ## Linguagem
