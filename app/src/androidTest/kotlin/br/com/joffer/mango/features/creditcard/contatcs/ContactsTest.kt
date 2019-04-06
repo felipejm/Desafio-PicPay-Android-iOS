@@ -46,7 +46,8 @@ class ContactsTest{
         activityRule.launchActivity(null)
 
         //then
-        onView(withId(R.id.search_view)).perform(typeText("Eduardo"))
+        val searchQuery = "Eduardo"
+        onView(withId(R.id.search_view)).perform(typeText(searchQuery))
 
         //should
         verifyHasItem(0, "Eduardo Santos", "@eduardo.santos")
