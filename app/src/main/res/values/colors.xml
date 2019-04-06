@@ -7,4 +7,8 @@
     <color name="search_text_color">#ACB1BD</color>
     <color name="green">#11C76F</color>
     <color name="red">#C71111</color>
+    <color name="payment_amount_hint">#95FFFFFF</color>
+    <color name="receipt_header_background">#151516</color>
+    <color name="receipt_divider">#3D4451</color>
+    <color name="pay_button_disabled">#8F929D</color>
 </resources>

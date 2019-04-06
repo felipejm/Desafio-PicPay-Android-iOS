@@ -5,7 +5,9 @@ import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.joffer.mango.R
+import br.com.joffer.mango.features.payment.PaymentActivity
 import br.com.joffer.mango.features.payment.creditcard.CardPrimingActivity
+import br.com.joffer.mango.features.payment.creditcard.CreditCard
 import br.com.joffer.mango.infra.utils.SpaceItemDecoration
 import br.com.joffer.mango.infra.utils.dpToPx
 import br.com.joffer.mango.infra.utils.gone
@@ -35,7 +37,7 @@ class ContactsActivity: AppCompatActivity(), ContactsView{
     override fun configuRecyclerView(contacts: List<Contact>){
         val adapter = ContactsAdapter(contacts)
         adapter.onClickListener = {
-            CardPrimingActivity.starter(this)
+            presenter.onContactClicked(it)
         }
 
         search_view.setOnFocusChangeListener { _, hasFocus ->
@@ -52,6 +54,14 @@ class ContactsActivity: AppCompatActivity(), ContactsView{
 
         val animation = AnimationUtils.loadLayoutAnimation(this, R.anim.layout_animation_fall_down)
         recycler_view.layoutAnimation = animation
+    }
+
+    override fun goToCardPriming(contact: Contact) {
+        CardPrimingActivity.starter(this, contact)
+    }
+
+    override fun goToPayment(contact: Contact, creditCard: CreditCard) {
+        PaymentActivity.starter(this, contact, creditCard)
     }
 
     override fun showLoading() {

@@ -1,8 +1,16 @@
 package br.com.joffer.mango.infra.utils
 
 import android.text.Editable
+import android.text.InputFilter
 import android.text.TextWatcher
+import android.util.Log
 import android.widget.EditText
+import java.text.DecimalFormat
+import java.text.NumberFormat
+import java.util.*
+import java.util.Collections.replaceAll
+
+
 
 class EditTextMask{
 
@@ -15,10 +23,8 @@ class EditTextMask{
                 .replace("*", "")
         }
 
-
-        fun mask(mask : String, etCpf : EditText) : TextWatcher{
-
-            val textWatcher : TextWatcher = object : TextWatcher {
+        fun mask(mask : String, editText : EditText) : TextWatcher{
+            return object : TextWatcher {
                 var isUpdating : Boolean = false
                 var oldString : String = ""
                 override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
@@ -53,8 +59,8 @@ class EditTextMask{
                     }
 
                     isUpdating = true
-                    etCpf.setText(cpfWithMask)
-                    etCpf.setSelection(cpfWithMask.length)
+                    editText.setText(cpfWithMask)
+                    editText.setSelection(cpfWithMask.length)
 
                 }
 
@@ -62,8 +68,6 @@ class EditTextMask{
 
                 }
             }
-
-            return textWatcher
         }
     }
 }

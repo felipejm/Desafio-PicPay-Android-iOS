@@ -23,12 +23,18 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="br.com.joffer.mango.features.payment.creditcard.CardPrimingActivity"
+        <activity android:name=".features.payment.creditcard.CardPrimingActivity"
                   android:screenOrientation="portrait"/>
 
         <activity
                 android:exported="true"
-                android:name="br.com.joffer.mango.features.payment.creditcard.register.RegisterCardActivity"
+                android:name=".features.payment.creditcard.register.RegisterCardActivity"
                   android:screenOrientation="portrait"/>
+
+        <activity
+                android:exported="true"
+                android:name=".features.payment.PaymentActivity"
+                android:windowSoftInputMode="stateVisible"
+                android:screenOrientation="portrait"/>
     </application>
 </manifest>

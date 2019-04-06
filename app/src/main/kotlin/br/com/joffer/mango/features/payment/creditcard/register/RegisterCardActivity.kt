@@ -5,6 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.joffer.mango.R
+import br.com.joffer.mango.features.payment.PaymentActivity
+import br.com.joffer.mango.features.payment.contacts.Contact
+import br.com.joffer.mango.features.payment.creditcard.CardPrimingActivity
 import br.com.joffer.mango.features.payment.creditcard.CreditCard
 import br.com.joffer.mango.infra.utils.*
 import com.jakewharton.rxbinding3.widget.afterTextChangeEvents
@@ -16,8 +19,11 @@ import java.util.concurrent.TimeUnit
 class RegisterCardActivity: AppCompatActivity(), RegisterCardView{
 
     companion object {
-        fun starter(context: Context){
-            context.startActivity(Intent(context, RegisterCardActivity::class.java))
+        private const val CONTACT = "CONTACT"
+        fun starter(context: Context, contact: Contact){
+            val intent = Intent(context, RegisterCardActivity::class.java)
+            intent.putExtra(CONTACT, contact)
+            context.startActivity(intent)
         }
     }
 
@@ -27,6 +33,8 @@ class RegisterCardActivity: AppCompatActivity(), RegisterCardView{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register_card)
+
+        presenter.onReceiveSerializable(intent?.getSerializableExtra(CONTACT))
         presenter.onCreate()
     }
 
@@ -35,8 +43,8 @@ class RegisterCardActivity: AppCompatActivity(), RegisterCardView{
         diposables.dispose()
     }
 
-    override fun goToPayment() {
-
+    override fun goToPayment(contact: Contact, creditCard: CreditCard) {
+        PaymentActivity.starter(this, contact, creditCard)
     }
 
     override fun configureClickListeners(){

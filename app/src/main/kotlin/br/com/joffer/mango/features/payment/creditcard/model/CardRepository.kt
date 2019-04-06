@@ -11,7 +11,7 @@ class CardRepository{
         PreferenceHelper.write(CREDIT_CARD, creditCard)
     }
 
-    fun get(): CreditCard{
-        return PreferenceHelper.read(CREDIT_CARD) as CreditCard
+    fun get(): CreditCard?{
+        return PreferenceHelper.read(CREDIT_CARD, CreditCard::class.java)
     }
 }

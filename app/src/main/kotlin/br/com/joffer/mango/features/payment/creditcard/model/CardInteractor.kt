@@ -9,5 +9,5 @@ interface CardInteractor{
     }
 
     fun save(creditCard: CreditCard)
-    fun get(): CreditCard
+    fun get(): CreditCard?
 }

@@ -8,10 +8,10 @@ class CardInteractorImpl: CardInteractor{
     private val repository = CardRepository()
 
     override fun save(creditCard: CreditCard){
-        thread { repository.save(creditCard) }
+        thread(start = true) { repository.save(creditCard) }
     }
 
-    override fun get(): CreditCard{
+    override fun get(): CreditCard?{
         return repository.get()
     }
 }

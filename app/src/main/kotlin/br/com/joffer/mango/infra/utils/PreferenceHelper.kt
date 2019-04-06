@@ -17,9 +17,17 @@ object PreferenceHelper {
         preference.edit().putString(key, listString).apply()
     }
 
-    fun read(key: String): Any? {
+    fun <T> read(key: String, clazz: Class<T>): T? {
         val context = App.instance?.applicationContext!!
         val preference = context.getSharedPreferences(PREFERENCE_KEY, Context.MODE_PRIVATE)
-        return preference.all[key]
+
+        val gson = GsonBuilder().create()
+
+        val json = preference.all[key] as? String
+        return if(json == null){
+            null
+        }else{
+            gson.fromJson(json, clazz)
+        }
     }
 }

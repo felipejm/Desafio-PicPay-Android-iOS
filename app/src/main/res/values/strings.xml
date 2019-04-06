@@ -8,7 +8,7 @@
     </string>
     <string name="card_preming_title">Cadastre um cartão de crédito</string>
     <string name="save">Salvar</string>
-    <string name="card_number">Numero do cartao</string>
+    <string name="card_number">Número do cartao</string>
     <string name="card_valid">Vencimento</string>
     <string name="cvv">CVV</string>
     <string name="card_owner">Nome do titular</string>
@@ -16,5 +16,10 @@
     <string name="owner_invalid">Nome do titular inválido</string>
     <string name="number_invalid">Número inválido</string>
     <string name="cvv_invalid">CVV inválido</string>
+    <string name="money">R$</string>
+    <string name="pay">Pagar</string>
+    <string name="edit">EDITAR</string>
+    <string name="receipt">Recibo</string>
+    <string name="total_paid">Total pago</string>
 
 </resources>
