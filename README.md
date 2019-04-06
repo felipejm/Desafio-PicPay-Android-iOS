@@ -1,5 +1,5 @@
 ![alt text](https://travis-ci.org/felipejm/Desafio-PicPay-Android-iOS.svg?branch=develop "Build Status")
-# Implementacao do Desafio-PicPay-Android-iOS
+# Desafio-PicPay-Android-iOS
 
 ## Linguagem
 * Kotlin
