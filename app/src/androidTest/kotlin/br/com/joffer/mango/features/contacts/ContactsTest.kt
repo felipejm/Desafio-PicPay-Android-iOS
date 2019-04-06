@@ -1,4 +1,4 @@
-package br.com.joffer.mango.features.creditcard.contatcs
+package br.com.joffer.mango.features.contacts
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.typeText

@@ -1,4 +1,4 @@
-package br.com.joffer.mango.features.creditcard.contatcs
+package br.com.joffer.mango.features.contacts
 
 import br.com.joffer.mango.features.payment.contacts.model.ContactApi
 import br.com.joffer.mango.features.payment.contacts.model.ContactInteractor
