@@ -18,5 +18,7 @@
     <string name="cvv_invalid">CVV inválido</string>
     <string name="pay">Pagar</string>
     <string name="edit">EDITAR</string>
+    <string name="money">R$</string>
+    <string name="receipt">Recibo</string>
     <string name="total_paid">Total pago</string>
 </resources>
