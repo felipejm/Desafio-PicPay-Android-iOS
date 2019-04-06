@@ -36,13 +36,13 @@ class PaymentPresenterImpl(val view: PaymentView) : PaymentPresenter {
 
     override fun pay(amount: String) {
         if (contact != null && creditCard != null) {
-            val amount = amount.replace(".", "").replace(",", ".").trim().toDouble()
+            val cleanAmount = amount.replace(".", "").replace(",", ".").trim().toDouble()
 
             val payment = Payment(
                 cardNumber = creditCard!!.number,
                 userId = contact!!.id,
                 expiryDate = creditCard!!.validation,
-                amount = amount,
+                amount = cleanAmount,
                 cvv = creditCard!!.cvv.toInt()
             )
 

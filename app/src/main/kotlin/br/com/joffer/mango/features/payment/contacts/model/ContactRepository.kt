@@ -7,10 +7,9 @@ import io.reactivex.Observable
 
 class ContactRepository: ContactInteractor{
 
-    private val service by lazy { RetrofitService(ContactApi::class.java, BuildConfig.BASE_URL).apiService }
+    private val service = RetrofitService(ContactApi::class.java, BuildConfig.BASE_URL).apiService
 
     override fun fetchContacts(): Observable<List<Contact>>{
         return service.fetchContacts()
     }
-
 }

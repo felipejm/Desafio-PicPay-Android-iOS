@@ -18,7 +18,7 @@ package br.com.joffer.mango.infra.utils
         val oddOrEven = digits and 1
         var sum: Long = 0
         for (count in 0 until digits) {
-            var digit = 0
+            var digit: Int
             try {
                 digit = Integer.parseInt(cardNumber[count] + "")
             } catch (e: NumberFormatException) {
