@@ -1,33 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:paddingBottom="8dp"
-        android:paddingTop="8dp"
-        android:background="@color/black_background"
-        tools:showIn="@layout/activity_contacts">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/black_background"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    tools:showIn="@layout/activity_contacts">
 
 
     <br.com.joffer.mango.infra.SearchEditText
-            android:id="@+id/search_view"
-            style="@style/SearchViewTheme"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:hint="@string/to_who_desire_to_pay"
-            android:textColorHint="@color/search_text_color"
-            android:textColor="@android:color/white"
-            android:drawablePadding="8dp"
-            android:paddingEnd="20dp"
-            android:paddingStart="20dp"
-            android:textSize="14sp"
-            android:drawableStart="@drawable/ic_search"
-            android:lines="1"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:textCursorDrawable="@android:color/white"
-            android:background="@drawable/background_search_view"/>
+        android:id="@+id/search_view"
+        style="@style/SearchViewTheme"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/background_search_view"
+        android:drawableStart="@drawable/ic_search"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="8dp"
+        android:hint="@string/to_who_desire_to_pay"
+        android:lines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/search_text_color"
+        android:textCursorDrawable="@android:color/white"
+        android:textSize="14sp" />
 
 </LinearLayout>
